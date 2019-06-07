@@ -3,7 +3,7 @@ SQM4 Linux Yocto Project BSP
 
 This layer extends functionality of the meta-fsl-bsp-release layer (https://source.codeaurora.org/external/imx/meta-fsl-bsp-release), which it depends on.
 
-For further details, please select specific release branch, e.g. imx-linux-sumo.
+For further details, please select specific release branch, e.g. sumo.
 
 
 Quick Start Guide
