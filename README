@@ -3,7 +3,9 @@ SQM4 Linux Yocto Project BSP
 
 This layer extends functionality of the meta-fsl-bsp-release layer (https://source.codeaurora.org/external/imx/meta-fsl-bsp-release), which it depends on.
 
-For further details, please select specific release branch, e.g. imx-linux-sumo.
+The following SQM4 boards are supported in this release:
+
+   * ELNICO SQM4-UL6-EasyBoard (sqm4ul6-eb)
 
 
 Quick Start Guide
@@ -16,10 +18,12 @@ $ chmod a+x ~/bin/repo
 $ PATH=${PATH}:~/bin
 
 Fetch all the layers:
-$ mkdir <release>
+$ mkdir <release>    # e.g. eln-release-bsp-sumo
 $ cd <release>
-$ repo init -u https://github.com/elnicoCZ/eln-release-bsp-manifest.git -b <branch>
+$ repo init -u https://github.com/elnicoCZ/eln-release-bsp-manifest.git -b imx-linux-sumo
 $ repo sync
 
 Setup build directory:
 $ [MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./eln-setup-release.sh -b <build folder>
+e.g.
+$ MACHINE=sqm4ul6-eb DISTRO=fsl-imx-xwayland source ./eln-setup-release.sh -b build-sqm4ul6-eb-xwayland
