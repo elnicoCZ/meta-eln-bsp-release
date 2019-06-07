@@ -1,0 +1,25 @@
+SQM4 Linux Yocto Project BSP
+============================
+
+This layer extends functionality of the meta-fsl-bsp-release layer (https://source.codeaurora.org/external/imx/meta-fsl-bsp-release), which it depends on.
+
+For further details, please select specific release branch, e.g. imx-linux-sumo.
+
+
+Quick Start Guide
+-----------------
+
+Install repo first, if not done yet:
+$ mkdir ~/bin
+$ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
+$ chmod a+x ~/bin/repo
+$ PATH=${PATH}:~/bin
+
+Fetch all the layers:
+$ mkdir <release>
+$ cd <release>
+$ repo init -u https://github.com/elnicoCZ/eln-release-bsp-manifest.git -b <branch>
+$ repo sync
+
+Setup build directory:
+$ [MACHINE=<machine>] [DISTRO=fsl-imx-<backend>] source ./eln-setup-release.sh -b <build folder>
